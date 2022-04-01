@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;900&display=swap');
+:root{
+    --coklat:#EED8C3;
+    --ungu-tua:#503C54;
+    --ungu-muda:#83707C;
+    --putih: #fff;
+}
+
+h1,h2,h3,h4,.txt-bold{
+    font-weight: 700;
+}
+
+.txt-brown{
+    color: var(--coklat);
+}
+
+.txt-ungu{
+    color: var(--ungu-tua) !important;
+}
+
+.txt-smol{
+    font-size: 12px;
+}
+
+html,body{
+    font-family: 'Raleway', sans-serif;
+    width: auto;
+    height: auto;
+    background-color: var(--coklat);
+}
+
+.nav-item{
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+}
+
+.login,.form-obese{
+    background-color: var(--ungu-tua);
+    border-radius: 0 25px 0 25px;
+}
+
+.login h2{
+    color: var(--coklat);
+}
+
+.redirect{
+    background-color: var(--ungu-muda);
+    color:var(--coklat);
+    width: 35%;
+}
+
+.login_submit{
+    width:100%;
+    background-color: var(--ungu-muda);
+    color:var(--coklat);
+}
+
+.dash{
+    background-color: var(--ungu-muda);
+    color:var(--coklat);
+    width:100%;
+    border-radius: 20px;
+    font-size:13px;
+}
+
+.kolom-q{
+    background-color: var(--ungu-tua);
+    height: fit-content;
+    border-radius: 20px;
+    color:var(--coklat);
+}
+
+.form-switch .form-check-input {
+    height: 24px;
+    width: 48px;
+}
+.form-switch .form-check-input:focus {
+    border-color: rgba(0, 0, 0, 0.25);
+    outline: 0;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(0,0,0,0.25)'/></svg>");
+}
+.form-switch .form-check-input:checked {
+    background-color: var(--ungu-muda);
+    border-color: var(--coklat);
+    border: none;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
+}
