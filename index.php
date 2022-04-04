@@ -46,11 +46,14 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-
-    <div class="row mt-4 p-3">
+    <br><br><br>
+    <div class="row mt-4 mb-4 p-3">
         <div class="col p-3 text-center txt-ungu">
-            <h2>Tunggu Apalagi? Yuk Berkonsultasi Dengan Mendaftar Sekarang Juga!</h2>
-            <a href="/final_project/views/register.php" class="button m-3 p-2 btn redirect">Daftar</a>
+            <img class="mt-3 mb-3" src="/final_project/assets/img/study.png" height="300" width="300">
+            <div class="m-3 p-3">
+                <h4>Tunggu Apalagi? Yuk Berkonsultasi Dengan Mendaftar Sekarang Juga!</h4>
+                <a href="/final_project/views/register.php" class="button m-3 p-2 btn redirect">Daftar</a>
+            </div>
         </div>
     </div>
 </div>

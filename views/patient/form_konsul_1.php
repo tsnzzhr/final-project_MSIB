@@ -1,10 +1,6 @@
 <?php require_once __DIR__ . '/../../templates/header.php'; ?>
 <script>
     $(document).ready(function() {
-        $(".navbar-nav").append(
-            ' <li class="nav-item"><a href="/final_project/views/patient/dashboard.php" class="nav-link m-3 menu">Dashboard</a></li>');
-        $("#login").remove();
-
         $('#cbox').on('change', function() {
             this.value = this.checked ? 1 : 0;
         }).change();
@@ -44,12 +40,13 @@
 
 if (isset($_POST['submit'])) {
     
-    $query = "INSERT INTO qna(judul_qna,qna_text,qna_visibility) VALUES(
-          '" . $_POST['judul'] . "', '" . htmlspecialchars($_POST['isi']) . "', 
-          '" . $_POST['checkbox'] . "')";
+    $query = "INSERT INTO qna(id_user,judul_qna,qna_text,qna_visibility,tag_qna) VALUES(
+          '" . $_SESSION['id_user'] . "','" . $_POST['judul'] . "', '" 
+          . htmlspecialchars($_POST['isi']) . "', '" . $_POST['checkbox'] . "','Obesitas & Diet Sehat');";
 
     if (mysqli_query($conn, $query)) {
-        header('Location: index.php');
+        //header('Location:index.php');
+        echo "Berhasil";
     } else {
         echo  $query;
         echo "terjadi kesalahan query";

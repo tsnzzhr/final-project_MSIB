@@ -1,18 +1,27 @@
 <?php
-    ob_start();
-    require_once __DIR__ . '/../templates/header.php';
+ob_start();
+require_once __DIR__ . '/../templates/header.php';
 
-        
     if (isset($_POST['submit'])) {
         $email = $_POST['email'];
         $password = md5($_POST['password']);
-
-        $query = "SELECT * FROM user WHERE email = '$email' AND password = '$password'";
-
-        if (mysqli_query($conn,$query) && strcmp($email,'dokter@fibertalk.com') != 0) {
-            header("location:patient/dashboard.php");
+     
+        $sql = "SELECT * FROM user WHERE email_user='$email' AND password_user='$password'";
+        $result = mysqli_query($conn, $sql);
+        if ($result->num_rows > 0) {
+            $row = mysqli_fetch_assoc($result);
+            $_SESSION['id_user'] = $row['id_user'];
+            $_SESSION['nama_user'] = $row['nama_user'];
+            $_SESSION['email_user'] = $row['email_user'];
+            $_SESSION['no_WA_user'] = "Belum Diisi";
+            if(strcmp($_SESSION['no_WA_user'],"") != 0){
+                $_SESSION['no_WA_user'] = $row['no_WA_user'];
+            }
+            //echo $_SESSION['id_user'];
+            header("Location:/final_project/views/login_success.php");
+            //header("Location:/final_project/index.php");
         } else {
-            header("location:nutritionist/dashboard.php");
+            echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
         }
     }
 
@@ -47,5 +56,6 @@
     </div>
 </div>
 
-<?php require_once __DIR__ . '/../templates/footer.php'; 
-ob_end_flush();?>
+<?php require_once __DIR__ . '/../templates/footer.php';
+
+ob_end_flush(); ?>

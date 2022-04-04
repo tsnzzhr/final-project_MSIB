@@ -6,6 +6,29 @@
     --putih: #fff;
 }
 
+*{
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: var(--ungu-muda);
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--ungu-tua);
+}
+
 h1,h2,h3,h4,.txt-bold{
     font-weight: 700;
 }
@@ -34,7 +57,7 @@ html,body{
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .login,.form-obese{
@@ -56,6 +79,11 @@ a{
     width:100%;
     background-color: var(--ungu-muda);
     color:var(--coklat);
+}
+
+.logo{
+    background-color: var(--coklat);
+    border-radius:100%;
 }
 
 .dash{
@@ -88,4 +116,15 @@ a{
     border-color: var(--coklat);
     border: none;
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
+}
+
+.form-select > option[selected] {
+    display: none !important;
+  }
+
+.tag{
+    background-color: var(--ungu-muda);
+    border-radius: 30px;
+    padding: 10px;
+    width: max-content;
 }

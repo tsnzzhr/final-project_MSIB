@@ -14,6 +14,13 @@
                         <input type="email" name="email" class="reg_input form-control" value="" placeholder="Email">
                     </div>
                     <div class="login-form p-2 m-3">
+                    <select name="gender" class="form-select" aria-label="Default select example">
+                        <option value="">Jenis Kelamin</option>
+                        <option value="L">Laki-Laki</option>
+                        <option value="P">Perempuan</option>
+                    </select>
+                    </div>
+                    <div class="login-form p-2 m-3">
                         <input type="password" name="password" id="password" class="reg_input form-control" value="" placeholder="Password">
                     </div>
                     <div class="login-form p-2 m-3">
@@ -50,12 +57,13 @@
 
 <?php
 if (isset($_POST['add'])) {
-    $query = "INSERT INTO user(nama_user, email, password) VALUES(
-          '" . $_POST['nama'] . "', '" . $_POST['email'] . "', MD5(
-          '" . $_POST['password'] . "'))";
+    $selectOption = $_POST['gender'];
+    $query = "INSERT INTO user(nama_user, email_user, password_user, gender_user) VALUES(
+          '" . $_POST['nama'] . "', '" . $_POST['email'] . "', MD5( '"
+          . $_POST['password'] . "'),'". $selectOption ."')";
 
-    if (mysqli_query($conn, $query)) {
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    if (mysqli_query($conn, $query) or die(mysqli_error($conn))) {
+        echo "Success!";
     } else {
         echo "Failed!";
     }

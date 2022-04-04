@@ -4,21 +4,29 @@
     <h1 class="mb-3 txt-ungu">Layanan</h1>
 
     <div class="row mb-2">
-        <div class="col-3 p-3 text-center">
+        <div class="col-4 p-3 text-center">
             <img src="/final_project/assets/img/diet.png" width="120" height="120">
             <p class="txt-ungu txt-bold p-3 mt-4">Konsultasi Obesitas & Diet Sehat</p>
         </div>
-        <div class="col-3 p-3 text-center">
+        <div class="col-4 p-3 text-center">
             <img src="/final_project/assets/img/pregnancy.png" width="120" height="120">
-            <p class="txt-ungu txt-bold p-3 mt-4">Konsultasi Ibu Hamil & Menyusui</p>
+            <p class="txt-ungu txt-bold p-3 mt-4">Konsultasi Gizi Ibu Hamil & Menyusui</p>
         </div>
-        <div class="col-3 p-3 text-center">
+        <div class="col-4 p-3 text-center">
             <img src="/final_project/assets/img/food-safety.png" width="120" height="120">
             <p class="txt-ungu txt-bold p-3 mt-4">Konsultasi Alergi</p>
         </div>
-        <div class="col-3 p-3 text-center">
+        <div class="col-4 p-3 text-center">
             <img src="/final_project/assets/img/cookie.png" width="120" height="120">
             <p class="txt-ungu txt-bold p-3 mt-4">Konsultasi Gizi Umum</p>
+        </div>
+        <div class="col-4 p-3 text-center">
+            <img src="/final_project/assets/img/supplement.png" width="120" height="120">
+            <p class="txt-ungu txt-bold p-3 mt-4">Kontrol Gizi Berkala</p>
+        </div>
+        <div class="col-4 p-3 text-center">
+            <img src="/final_project/assets/img/calendar.png" width="120" height="120">
+            <p class="txt-ungu txt-bold p-3 mt-4">Konsultasi Treatment Penyakit Gizi</p>
         </div>
 </div>
 <?php require_once __DIR__ . '/../templates/footer.php'; ?>
